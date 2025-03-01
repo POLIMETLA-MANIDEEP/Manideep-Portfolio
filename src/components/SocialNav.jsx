@@ -86,31 +86,31 @@ const socialItems = [
     id: 'github', 
     label: 'GitHub', 
     icon: <FaGithub />,
-    url: 'https://github.com/yourusername' 
+    url: 'https://github.com/POLIMETLA-MANIDEEP' 
   },
   { 
     id: 'linkedin', 
     label: 'LinkedIn', 
     icon: <FaLinkedinIn />,
-    url: 'https://linkedin.com/in/yourusername' 
+    url: 'https://linkedin.com/in/manideep2005' 
   },
   { 
     id: 'instagram', 
     label: 'Instagram', 
     icon: <FaInstagram />,
-    url: 'https://instagram.com/yourusername' 
+    url: 'https://instagram.com/mr.unknown_449' 
   },
   { 
     id: 'twitter', 
     label: 'Twitter', 
     icon: <FaTwitter />,
-    url: 'https://twitter.com/yourusername' 
+    url: 'https://twitter.com/Mr.EDITH.143' 
   },
   { 
     id: 'codechef', 
     label: 'CodeChef', 
     icon: <SiCodechef />,
-    url: 'https://codechef.com/users/yourusername' 
+    url: 'https://codechef.com/users/manideep005' 
   },
   { 
     id: 'gmail', 
