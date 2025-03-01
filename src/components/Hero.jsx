@@ -133,6 +133,10 @@ const Hero = () => {
               I'm a{' '}
               <TypeAnimation
                 sequence={[
+                  'Student',
+                  2000,
+                  'Software Developer',
+                  2000,
                   'Full Stack Developer',
                   2000,
                   'MERN Stack Developer',
