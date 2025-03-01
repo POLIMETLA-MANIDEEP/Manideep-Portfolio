@@ -116,7 +116,7 @@ const socialItems = [
     id: 'gmail', 
     label: 'Gmail', 
     icon: <MdEmail />,
-    url: 'mailto:manideep9476@gmail.com?subject=Portfolio Contact' 
+    url: 'https://mail.google.com/mail/u/0/#inbox?compose=new' 
   }
 ];
 
