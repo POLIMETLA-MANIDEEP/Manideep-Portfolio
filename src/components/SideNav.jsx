@@ -2,9 +2,21 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
-const NavContainer = styled.div`
+const Wrapper = styled.div`
   position: fixed;
-  right: 20px;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 9999;
+`;
+
+const NavContainer = styled(motion.div)`
+  position: fixed;
+  right: -80px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 9999;
@@ -90,6 +102,7 @@ const navItems = [
 
 const SideNav = () => {
   const [activeSection, setActiveSection] = useState('hero');
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleNavClick = (id) => {
     const element = document.getElementById(id);
@@ -100,20 +113,25 @@ const SideNav = () => {
   };
 
   return (
-    <NavContainer>
-      {navItems.map((item) => (
-        <NavItem
-          key={item.id}
-          isActive={activeSection === item.id}
-          onClick={() => handleNavClick(item.id)}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {item.icon}
-          <Tooltip className="tooltip">{item.label}</Tooltip>
-        </NavItem>
-      ))}
-    </NavContainer>
+    <Wrapper
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
+    >
+      <NavContainer animate={{ right: isVisible ? '20px' : '-80px' }}>
+        {navItems.map((item) => (
+          <NavItem
+            key={item.id}
+            isActive={activeSection === item.id}
+            onClick={() => handleNavClick(item.id)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {item.icon}
+            <Tooltip className="tooltip">{item.label}</Tooltip>
+          </NavItem>
+        ))}
+      </NavContainer>
+    </Wrapper>
   );
 };
 
