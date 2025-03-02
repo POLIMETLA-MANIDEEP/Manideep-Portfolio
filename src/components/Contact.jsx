@@ -171,6 +171,7 @@ const Contact = () => {
             <Input
               type="text"
               name="from_name"
+              placeholder='your name'
               required
             />
           </InputGroup>
@@ -179,6 +180,7 @@ const Contact = () => {
             <Input
               type="text"
               name="to_name"
+              placeholder='my name if you know'
               required
             />
           </InputGroup>
@@ -194,6 +196,7 @@ const Contact = () => {
             <Input
               type="email"
               name="reply_to"
+              placeholder='Your Email'
               required
             />
           </InputGroup>
