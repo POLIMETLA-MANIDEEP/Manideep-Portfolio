@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { SiCodechef } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
 
-const NavContainer = styled.div`
+const NavWrapper = styled.div`
   position: fixed;
-  left: 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px; /* Invisible trigger area */
+  height: 300px;
+  z-index: 9999;
+`;
+
+const NavContainer = styled(motion.div)`
+  position: fixed;
+  left: -70px; /* Initially hidden */
   top: 50%;
   transform: translateY(-50%);
   z-index: 9999;
@@ -82,61 +92,41 @@ const Tooltip = styled.span`
 `;
 
 const socialItems = [
-  { 
-    id: 'github', 
-    label: 'GitHub', 
-    icon: <FaGithub />,
-    url: 'https://github.com/POLIMETLA-MANIDEEP' 
-  },
-  { 
-    id: 'linkedin', 
-    label: 'LinkedIn', 
-    icon: <FaLinkedinIn />,
-    url: 'https://linkedin.com/in/manideep2005' 
-  },
-  { 
-    id: 'instagram', 
-    label: 'Instagram', 
-    icon: <FaInstagram />,
-    url: 'https://instagram.com/mr.unknown_449' 
-  },
-  { 
-    id: 'twitter', 
-    label: 'Twitter', 
-    icon: <FaTwitter />,
-    url: 'https://twitter.com/Mr.EDITH.143' 
-  },
-  { 
-    id: 'codechef', 
-    label: 'CodeChef', 
-    icon: <SiCodechef />,
-    url: 'https://codechef.com/users/manideep005' 
-  },
-  { 
-    id: 'gmail', 
-    label: 'Gmail', 
-    icon: <MdEmail />,
-    url: 'https://mail.google.com/mail/u/0/#inbox?compose=new' 
-  }
+  { id: 'github', label: 'GitHub', icon: <FaGithub />, url: 'https://github.com/POLIMETLA-MANIDEEP' },
+  { id: 'linkedin', label: 'LinkedIn', icon: <FaLinkedinIn />, url: 'https://linkedin.com/in/manideep2005' },
+  { id: 'instagram', label: 'Instagram', icon: <FaInstagram />, url: 'https://instagram.com/mr.unknown_449' },
+  { id: 'twitter', label: 'Twitter', icon: <FaTwitter />, url: 'https://twitter.com/Mr.EDITH.143' },
+  { id: 'codechef', label: 'CodeChef', icon: <SiCodechef />, url: 'https://codechef.com/users/manideep005' },
+  { id: 'gmail', label: 'Gmail', icon: <MdEmail />, url: 'https://mail.google.com/mail/u/0/#inbox?compose=new' },
 ];
 
 const SocialNav = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
-    <NavContainer>
-      {socialItems.map((item) => (
-        <NavItem
-          key={item.id}
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {item.icon}
-          <Tooltip className="tooltip">{item.label}</Tooltip>
-        </NavItem>
-      ))}
-    </NavContainer>
+    <NavWrapper
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
+    >
+      <NavContainer
+        animate={{ left: isVisible ? '20px' : '-70px' }}
+        transition={{ type: 'tween', duration: 0.3 }}
+      >
+        {socialItems.map((item) => (
+          <NavItem
+            key={item.id}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {item.icon}
+            <Tooltip className="tooltip">{item.label}</Tooltip>
+          </NavItem>
+        ))}
+      </NavContainer>
+    </NavWrapper>
   );
 };
 
