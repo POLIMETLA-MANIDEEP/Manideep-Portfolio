@@ -137,6 +137,13 @@ const projectsData = [
     image: "/projects/Project-5.png",
     link: "https://pm-portfolio-site.netlify.app",
     technologies: ["React", "Express", "MongoDB", "NodeJS"]
+  },
+  {
+    title: "AI-Powered Chatbot – Real-time Conversational Assistant",
+    description: "An AI-powered chatbot built with the MERN stack and shadcn/ui for real-time conversations, featuring a clean UI, seamless API integration, and responsive design.",
+    image: "/projects/Project-6.png",
+    link: "https://pm-chatbot.netlify.app",
+    technologies: ["React.js", "Tailwind CSS", "shadcn/ui", "Node.js", "Express.js", "MongoDB", "OpenAI API", "JWT Auth" ]
   }
 ];
 
