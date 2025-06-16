@@ -107,7 +107,7 @@ const ProjectLink = styled.a`
 const projectsData = [
   {
     title: "React Weather App",
-    description: "A weather application built with React that shows current weather and 5-day forecast.",
+    description: "Weather App built Tailwind CSS, and React utilizing a weather API to fetch real-time weather data for any location. Delivers a clean and responsive UI for seamless weather updates",
     image: "/projects/Project-1.png",
     technologies: ["React", "Node.js", "OpenWeather API"],
     link: "https://manideep-weather-app.netlify.app"
@@ -119,14 +119,8 @@ const projectsData = [
     technologies: ["HTML", "CSS", "React"]
   },
   {
-    title: "JWT Authentication Demo",
-    description: "A Sample Login and SignUp page which perform authentication. Shows the working of webTokens. Code is available in the github.",
-    image: "/projects/Project-3.png",
-    technologies: ["HTML", "CSS", "React", "Express", "MongoDB", "NodeJS"]
-  },
-  {
     title: "Student CRUD App",
-    description: "Perform CRUD operations using MongoDB. Hosted on Netlify.",
+    description: "Student Management System whihc perform the basic database operations also with a GPA calculator included in it. Best suited for the college students",
     image: "/projects/Project-4.png",
     link: "https://manideep-crud-app.netlify.app",
     technologies: ["React", "Express", "MongoDB", "NodeJS"]
