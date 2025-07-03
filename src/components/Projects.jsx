@@ -113,31 +113,41 @@ const projectsData = [
     link: "https://manideep-weather-app.netlify.app"
   },
   {
-    title: "Groceries List App",
-    description: "A Simple ToDo List builded using React used to add the Items and Edit or delete them. Not Hosted by code is available in the github",
-    image: "/projects/Project-2.png",
-    technologies: ["HTML", "CSS", "React"]
-  },
-  {
     title: "Student CRUD App",
     description: "Student Management System whihc perform the basic database operations also with a GPA calculator included in it. Best suited for the college students",
-    image: "/projects/Project-4.png",
+    image: "/projects/Project-2.png",
     link: "https://manideep-crud-app.netlify.app",
     technologies: ["React", "Express", "MongoDB", "NodeJS"]
   },
   {
     title: "Student Portfolio",
     description: "Portfolio showcasing my work and technologies. Hosted on Netlify.",
-    image: "/projects/Project-5.png",
+    image: "/projects/Project-3.png",
     link: "https://pm-portfolio-site.netlify.app",
     technologies: ["React", "Express", "MongoDB", "NodeJS"]
   },
   {
     title: "AI-Powered Chatbot – Real-time Conversational Assistant",
     description: "An AI-powered chatbot built with the MERN stack and shadcn/ui for real-time conversations, featuring a clean UI, seamless API integration, and responsive design.",
-    image: "/projects/Project-6.png",
+    image: "/projects/Project-4.png",
     link: "https://pm-chatbot.netlify.app",
     technologies: ["React.js", "Tailwind CSS", "shadcn/ui", "Node.js", "Express.js", "MongoDB", "OpenAI API", "JWT Auth" ]
+  },
+  {
+    title: "Story Blog Platform",
+    description: "WhisperTales is a MERN stack story blog where users can read stories and share ideas. It features a sleek UI, secure auth, and a fast, user-friendly experience.",
+    image: "/projects/Project-5.png",
+    link: "https://pm-community.netlify.app",
+    technologies: ["React.js",
+  "Shadcn UI",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "JWT (JSON Web Token)",
+  "Mongoose",
+  "REST API",
+  "Tailwind CSS",
+  "Vite"]
   }
 ];
 
